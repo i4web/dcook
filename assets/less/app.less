@@ -1,18 +1,19 @@
 /*!
- * Roots 6.5.2
+ * DCook 1.0.0
  */
 
 @import "bootstrap/bootstrap.less";
 
 /*Store the Project's color palette variables here. Use project-{color} naming convention */
 @project-blue:         #26b7f0;
+@project-light-blue:   #098ed3;
 
 /* Project Specific Font Family */
 @project-font-main: 	 "Helvetica Neue", Helvetica, Arial, sans-serif;
 @project-font-headings: inherit;
 @project-font-size-base:	14px;
 
-	 
+
 
 
 /* ==========================================================================
@@ -22,6 +23,26 @@
 body { }
 
 
+/* ==========================================================================
+   Navbar
+   ========================================================================== */
+.navbar-default{
+  background-color: #FFF;
+}
+.navbar-default .navbar-nav>li>a{
+  color: @project-light-blue;
+}
+.navbar-brand{
+  padding: 4px 15px;
+}
+
+
+// Active Page
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus {
+  color: #555;
+  background-color: #FFF;
+  border-bottom: 5px solid #1c528e;
+}
 
 /* ==========================================================================
    Header

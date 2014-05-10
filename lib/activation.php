@@ -120,13 +120,26 @@ function i4web_theme_activation_action() {
     return;
   }
 
+
+
   if ($i4web_theme_activation_options['create_front_page'] === 'true') {
     $i4web_theme_activation_options['create_front_page'] = false;
 
-    $default_pages = array('Home');
+    $default_pages = array(
+                          'Home',
+                          'Attorney Profile',
+                          'Practice Areas',
+                          'Family Law',
+                          'Adoption Law',
+                          'Mediation Law',
+                          'Divorce Law',
+                          'Guardianship',
+                          'Collaborative Law',
+                          'Contact Us');
     $existing_pages = get_pages();
     $temp = array();
 
+    //Check existing pages against pages being created
     foreach ($existing_pages as $page) {
       $temp[] = $page->post_title;
     }
